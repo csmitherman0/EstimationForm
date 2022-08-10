@@ -18,6 +18,12 @@ const paths = [
                         nextLevel.classList.add('active');
                     } else {
                         nextLevel.classList.remove('active');
+
+                        const inputs = nextLevel.querySelectorAll('input');
+                        inputs.forEach(input => {
+                            input.checked = false;
+                            input.disabled = true;
+                        });
                     }
                 })
             }
@@ -38,6 +44,17 @@ const paths = [
         }
     }
 ];
+
+form.addEventListener('submit', function () {
+    const requiredCheckboxes = $('.browsers :checkbox[required]');
+    requiredCheckboxes.change(function () {
+        if (requiredCheckboxes.is(':checked')) {
+            requiredCheckboxes.removeAttr('required');
+        } else {
+            requiredCheckboxes.attr('required', 'required');
+        }
+    });
+});
 
 const app = function () {
     let servicePath = null; // Will contain <div> with class of "service" and id matching the service type
