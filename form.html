@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <form action="">
+        <h2>Please select one of our services</h2>
+        <select name="service" id="service-select" required>
+            <option value="">-- Please select a service --</option>
+            <option value="carpet-cleaning">Carpet Cleaning</option>
+            <option value="tile-cleaning">Tile/Grout Cleaning</option>
+            <option value="carpet-stretching">Carpet Stretching</option>
+        </select>
+
+        <div id="carpet-cleaning" class="service">
+            <h3>What rooms would you like cleaned?</h3>
+            <label>
+                <input type="checkbox" value="living-room" name="area"> Living Room
+            </label>
+            <div>
+                <h4>Is the living room larger than 200 square feet?</h4>
+                <label>
+                    <input type="radio" name="is-large-lr" value="true" required> Yes
+                </label>
+                <label>
+                    <input type="radio" name="is-large-lr" value="false" required> No
+                </label>
+            </div>
+
+            <label>
+                <input type="checkbox" value="bedrooms" name="area"> Bedroom(s)
+            </label>
+            <div>
+                <h4>How many bedrooms?</h4>
+                <input type="number" min="1" placeholder="1">
+            </div>
+
+            <label>
+                <input type="checkbox" value="family-room" name="area"> Family Room
+            </label>
+            <div>
+
+            </div>
+
+            <label>
+                <input type="checkbox" value="stairs" name="area"> Stairs
+            </label>
+            <div>
+
+            </div>
+        </div>
+
+        <div id="tile-cleaning" class="service">
+            <h3>What is the square footage of the area to be cleaned?</h3>
+            <input type="number" name="square-feet" min="200" placeholder="200">
+        </div>
+
+        <div id="carpet-stretching" class="service">
+            <h3>How many rooms need to be stretched?</h3>
+            <input type="number" name="rooms-to-stretch" min="1" placeholder="1">
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

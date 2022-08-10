@@ -1,0 +1,12 @@
+div {
+    margin-left: 1em;
+    display: none;
+}
+
+div.active {
+    display: block;
+}
+
+label {
+    display: block;
+}
