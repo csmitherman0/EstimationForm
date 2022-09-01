@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form action="">
+    <form action="/" method="POST">
         <h2>Please select one of our services</h2>
         <select name="service" id="service-select" required>
             <option value="">-- Please select a service --</option>
@@ -22,7 +22,7 @@
         <div id="carpet-cleaning" class="service">
             <h3>What rooms would you like cleaned?</h3>
             <label>
-                <input type="checkbox" value="living-room" name="area" required> Living Room
+                <input type="checkbox" value="living-room" name="areas"> Living Room
             </label>
             <div>
                 <h4>Is the living room larger than 200 square feet?</h4>
@@ -35,22 +35,22 @@
             </div>
 
             <label>
-                <input type="checkbox" value="bedrooms" name="area" required> Bedroom(s)
+                <input type="checkbox" value="bedrooms" name="areas"> Bedroom(s)
             </label>
             <div>
                 <h4>How many bedrooms?</h4>
-                <input type="number" min="1" placeholder="1">
+                <input type="number" min="1" placeholder="1" name="num-bedrooms" value="1">
             </div>
 
             <label>
-                <input type="checkbox" value="family-room" name="area" required> Family Room
+                <input type="checkbox" value="family-room" name="areas"> Family Room
             </label>
             <div>
 
             </div>
 
             <label>
-                <input type="checkbox" value="stairs" name="area" required> Stairs
+                <input type="checkbox" value="stairs" name="areas"> Stairs
             </label>
             <div>
 
@@ -58,7 +58,7 @@
         </div>
 
         <div id="tile-cleaning" class="service">
-            <h3>What is the square footage of the area to be cleaned?</h3>
+            <h3>What is the square footage of the areas to be cleaned?</h3>
             <input type="number" name="square-feet" min="200" placeholder="200">
         </div>
 

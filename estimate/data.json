@@ -1,0 +1,19 @@
+{
+    "services": [
+        {
+            "name": "carpet-cleaning",
+            "areas": [
+                {
+                    "name": "living-room",
+                    "input": {
+                        "type": "bool",
+                        "name": "is-large-lr"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "carpet-stretching"
+        }
+    ]
+}
