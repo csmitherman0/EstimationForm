@@ -11,9 +11,9 @@ module.exports = function (jobData) {
             total += jobData['num-bedrooms'];
 
             //ERROR ASSIGNMENT TO CONSTANT VARIABLE
-            // areas = areas.splice(areas.findIndex(e => e === 'bedrooms'), 1);
+            areas.splice(areas.findIndex(e => e === 'bedrooms'), 1);
         }
-        total = areas.length * 50;
+        total += areas.length * 50;
     }
 
     return total;

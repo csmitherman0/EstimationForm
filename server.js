@@ -21,6 +21,10 @@ app.get('/', (req, res) => {
     res.sendFile('form.html', { root: __dirname });
 });
 
+app.get('/forms/new', (req, res) => {
+    res.sendFile('forms/new.html', { root: __dirname });
+})
+
 app.post('/', (req, res) => {
     console.log(req.body);
     const total = estimate(req.body);
