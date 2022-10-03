@@ -8,7 +8,6 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true })); // Body-parsing middleware. The request body is undefined by default.
 app.use(express.static(path.join(__dirname, 'public'))); // For static assets
-app.use(express.urlencoded({ extended: true })); // Body-parsing middleware. The request body is undefined by default.
 
 
 /*****************

@@ -71,7 +71,7 @@ const app = function () {
             servicePath.classList.remove('active');
         }
 
-        // Find the service path with the service type
+        // Find the service path with the serviceType variable
         for (service of servicePaths) {
             if (service.id === serviceType) {
                 servicePath = service;
